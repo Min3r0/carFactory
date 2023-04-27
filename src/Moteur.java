@@ -1,18 +1,24 @@
 public class Moteur {
+    private String name;
     private int nbPiston;
     private double cylinderCapacity;
      private int couple;
      private int horsepower;
-
      private int consumption;
 
-     public Moteur(int nbPiston, double cylinderCapacity, int couple, int horsepower, int consumption){
+     public Moteur(String name,int nbPiston, double cylinderCapacity, int couple, int horsepower, int consumption){
+
+         this.name = name;
          this.nbPiston = nbPiston;
          this.cylinderCapacity = cylinderCapacity;
          this.couple = couple;
          this.horsepower = horsepower;
          this.consumption = consumption;
      }
+
+    public String getName() {
+        return name;
+    }
 
     public int getCouple() {
         return couple;

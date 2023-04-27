@@ -1,30 +1,21 @@
-public class Voiture {
-    private Moteur moteur;
-    private Marque marque;
-    private int constructionYear;
-    private int kmTravelled;
+public class Voiture extends Vehicule {
+
+
     private int remainingFuel;
     private int tankCapacity;
-    private int nbDoor;
+    private int nbPorteMax;
+    private int nbPorteActuel;
+
+
+
     private String color;
 
-    public Voiture(Moteur moteur, Marque marque, int constructionYear, int kmTravelled, int remainingFuel, int tankCapacity, int nbDoor, String color){
-        this.moteur = moteur;
-        this.marque = marque;
-        this.constructionYear = constructionYear;
-        this.kmTravelled = kmTravelled;
+    public Voiture(String name, Moteur moteur, Marque marque, int nbRoueMax, int nbRoueActuel, int constructionYear, int kmTravelled, int remainingFuel, int tankCapacity, int nbPorteMax, String color){
+        super(name, moteur, marque, nbRoueMax, nbRoueActuel, constructionYear, kmTravelled);
         this.remainingFuel = remainingFuel;
         this.tankCapacity = tankCapacity;
-        this.nbDoor = nbDoor;
+        this.nbPorteMax = nbPorteMax;
         this.color = color;
-    }
-
-    public Moteur getMoteur() {
-        return moteur;
-    }
-
-    public Marque getMarque() {
-        return marque;
     }
 
     public int setConstructionYear() {
@@ -43,8 +34,8 @@ public class Voiture {
         return tankCapacity;
     }
 
-    public int getNbDoor() {
-        return nbDoor;
+    public int getNbPorteMax() {
+        return nbPorteMax;
     }
 
     public String getColor() {
