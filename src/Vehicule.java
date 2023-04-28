@@ -1,28 +1,25 @@
-import java.security.SecureRandom;
-import java.sql.Struct;
-
 public abstract class Vehicule {
-    private String name;
-    private Moteur moteur;
-    private Marque marque;
-    private String color;
-    private int nbRoueMax;
-    private int nbRoueActuel;
-    private int constructionYear;
-    private int kmTravelled;
-    private int tankCapacity;
-    private int remainingFuel;
-    private boolean ready;
-    private boolean custom;
+    private final String name;
+    private final Motor motor;
+    private final Mark mark;
+    private final String color;
+    private final int numberMaxWheel;
+    private final int numberWheelCurrent;
+    private final int constructionYear;
+    private final int kmTravelled;
+    private final int tankCapacity;
+    private final int remainingFuel;
+    private final boolean ready;
+    private final boolean custom;
 
 
-    public Vehicule(final String name, final Moteur moteur, final Marque marque, final String color, final int nbRoueMax, final int nbRoueActuel, int constructionYear, int kmTravelled, int remainingFuel, int tankCapacity, boolean ready, boolean custom) {
+    public Vehicule(final String name, final Motor motor, final Mark mark, final String color, final int numberMaxWheel, final int numberWheelCurrent, int constructionYear, int kmTravelled, int remainingFuel, int tankCapacity, boolean ready, boolean custom) {
         this.name = name;
-        this.moteur = moteur;
-        this.marque = marque;
+        this.motor = motor;
+        this.mark = mark;
         this.color = color;
-        this.nbRoueMax = nbRoueMax;
-        this.nbRoueActuel = nbRoueActuel;
+        this.numberMaxWheel = numberMaxWheel;
+        this.numberWheelCurrent = numberWheelCurrent;
         this.constructionYear = constructionYear;
         this.kmTravelled = kmTravelled;
         this.remainingFuel = remainingFuel;
@@ -35,21 +32,21 @@ public abstract class Vehicule {
         return name;
     }
 
-    public Moteur getMoteur() {
-        return moteur;
+    public Motor getMotor() {
+        return motor;
     }
 
-    public Marque getMarque() {
-        return marque;
+    public Mark getMark() {
+        return mark;
     }
 
 
-    public int getNbRoueActuel() {
-        return nbRoueActuel;
+    public int getNumberWheelCurrent() {
+        return numberWheelCurrent;
     }
 
-    public int getNbRoueMax() {
-        return nbRoueMax;
+    public int getNumberMaxWheel() {
+        return numberMaxWheel;
     }
 
     public int setConstructionYear() {

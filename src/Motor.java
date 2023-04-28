@@ -1,15 +1,15 @@
-public class Moteur {
+public class Motor {
     private String name;
-    private int nbPiston;
+    private int numberPiston;
     private double cylinderCapacity;
      private int couple;
      private int horsepower;
      private int consumption;
 
-     public Moteur(String name,int nbPiston, double cylinderCapacity, int couple, int horsepower, int consumption){
+     public Motor(String name, int numberPiston, double cylinderCapacity, int couple, int horsepower, int consumption){
 
          this.name = name;
-         this.nbPiston = nbPiston;
+         this.numberPiston = numberPiston;
          this.cylinderCapacity = cylinderCapacity;
          this.couple = couple;
          this.horsepower = horsepower;
@@ -32,8 +32,8 @@ public class Moteur {
         return horsepower;
     }
 
-    public int getNbPiston() {
-        return nbPiston;
+    public int getNumberPiston() {
+        return numberPiston;
     }
 
     public int getConsumption() {

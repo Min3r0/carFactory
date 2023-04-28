@@ -1,10 +1,10 @@
 import java.security.PrivateKey;
 
-public class Marque {
-    private String name;
-    private int creationDate;
-    private String origin;
-    public Marque(String name, int creationDate, String origin){
+public class Mark {
+    private final String name;
+    private final int creationDate;
+    private final String origin;
+    public Mark(String name, int creationDate, String origin){
         this.name = name;
         this.creationDate = creationDate;
         this.origin = origin;
