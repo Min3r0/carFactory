@@ -27,7 +27,7 @@ public class Usine {
         final List<Vehicule> listVehicules = new ArrayList<>();
         listVehicules.add( new Voiture("Mustang69", listMoteurs.get(0), listMarques.get(1), "Yellow",4, 4, 1969, 180, 48, 60, 3, 3, true, false));
         listVehicules.add( new Voiture("Peugeot106", listMoteurs.get(1), listMarques.get(2),"Grey",4, 4, 2002,76000,15, 45,3,3, true, false));
-        listVehicules.add( new Voiture("Miletipla", listMoteurs.get(2), listMarques.get(0),"Red",4, 4, 2023, 25, 12, 63,2,2, true, true));
+        listVehicules.add( new Voiture("Milletipla", listMoteurs.get(2), listMarques.get(0),"Red",4, 4, 2023, 25, 12, 63,2,2, true, true));
 
         return listVehicules;
     }
@@ -37,7 +37,7 @@ public class Usine {
             return false;
         }else if(vehicule.getNbRoueMax()!= vehicule.getNbRoueActuel()){
             return false;
-        }else if(vehicule.){
+        //}else if(vehicule.){
             //getNnPorteMax
         }else{
             return true;
@@ -51,6 +51,8 @@ public class Usine {
         final List<Moteur> listMoteurs = initializeListMoteurs();
         final List<Vehicule> listVehicules = initializeListVehicules(listMarques, listMoteurs);
 
+        Print.printVehicule(listVehicules);
+        Menu.mainMenu(listVehicules);
 
 
     }

@@ -17,4 +17,16 @@ public class Voiture extends Vehicule {
     public int getNbPorteActuel() {
         return nbPorteActuel;
     }
+
+    public static boolean checkReady (Vehicule vehicule) {
+        if (vehicule.getMoteur().getMotorName().equals("NoMotor")) {
+            return false;
+        } else if (vehicule.getNbRoueMax() != vehicule.getNbRoueActuel()) {
+            return false;
+            //}else if(vehicule.){
+            //getNnPorteMax
+        } else {
+            return true;
+        }
+    }
 }

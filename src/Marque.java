@@ -10,7 +10,7 @@ public class Marque {
         this.origin = origin;
     }
 
-    public String getName() {
+    public String getMarkName() {
         return name;
     }
 
