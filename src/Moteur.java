@@ -16,7 +16,7 @@ public class Moteur {
          this.consumption = consumption;
      }
 
-    public String getName() {
+    public String getMotorName() {
         return name;
     }
 

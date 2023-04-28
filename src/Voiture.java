@@ -1,44 +1,20 @@
 public class Voiture extends Vehicule {
 
-
-    private int remainingFuel;
-    private int tankCapacity;
     private int nbPorteMax;
     private int nbPorteActuel;
 
 
-
-    private String color;
-
-    public Voiture(String name, Moteur moteur, Marque marque, int nbRoueMax, int nbRoueActuel, int constructionYear, int kmTravelled, int remainingFuel, int tankCapacity, int nbPorteMax, String color){
-        super(name, moteur, marque, nbRoueMax, nbRoueActuel, constructionYear, kmTravelled);
-        this.remainingFuel = remainingFuel;
-        this.tankCapacity = tankCapacity;
+    public Voiture(final String name, final Moteur moteur, final Marque marque, final String color, final int nbRoueMax, final int nbRoueActuel, int constructionYear, int kmTravelled, int remainingFuel, int tankCapacity, int nbPorteMax, int nbPorteActuel, boolean ready, boolean custom) {
+        super(name, moteur, marque, color,nbRoueMax, nbRoueActuel, constructionYear, kmTravelled, remainingFuel, tankCapacity, ready, custom);
         this.nbPorteMax = nbPorteMax;
-        this.color = color;
-    }
-
-    public int setConstructionYear() {
-        return constructionYear;
-    }
-
-    public int getKmTravelled() {
-        return kmTravelled;
-    }
-
-    public int getRemainingFuel() {
-        return remainingFuel;
-    }
-
-    public int getTankCapacity() {
-        return tankCapacity;
+        this.nbPorteActuel = nbPorteActuel;
     }
 
     public int getNbPorteMax() {
         return nbPorteMax;
     }
 
-    public String getColor() {
-        return color;
+    public int getNbPorteActuel() {
+        return nbPorteActuel;
     }
 }
