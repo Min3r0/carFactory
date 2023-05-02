@@ -18,15 +18,11 @@ public class Car extends Vehicule {
         return numberDoorCurrent;
     }
 
-    public static boolean checkReady (Vehicule vehicule) {
-        if (vehicule.getMotor().getMotorName().equals("NoMotor")) {
+    public boolean checkReady () {
+        if (getMotor().getMotorName().equals("NoMotor")) {
             return false;
-        } else if (vehicule.getNumberMaxWheel() != vehicule.getNumberWheelCurrent()) {
+        } else if (getNumberMaxWheel() != getNumberWheelCurrent()) {
             return false;
-            //}else if(vehicule.){
-            //getNnPorteMax
-        } else {
-            return true;
-        }
+        }else return getNumberMaxDoor() == getNumberDoorCurrent();
     }
 }

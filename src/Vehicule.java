@@ -8,10 +8,13 @@ public abstract class Vehicule {
     private final int constructionYear;
     private final int kmTravelled;
     private final int tankCapacity;
-    private final int remainingFuel;
+    private int remainingFuel;
     private final boolean ready;
     private final boolean custom;
 
+    public void addFuel(int fuelAdding){
+        this.remainingFuel += fuelAdding;
+    }
 
     public Vehicule(final String name, final Motor motor, final Mark mark, final String color, final int numberMaxWheel, final int numberWheelCurrent, int constructionYear, int kmTravelled, int remainingFuel, int tankCapacity, boolean ready, boolean custom) {
         this.name = name;
@@ -64,5 +67,8 @@ public abstract class Vehicule {
     public int getTankCapacity() {
         return tankCapacity;
     }
+
+    abstract boolean checkReady();
+
 
 }
