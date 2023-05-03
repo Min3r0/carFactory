@@ -4,7 +4,8 @@ import java.util.Scanner;
 public class Menu {
 //car's characteristics
     public static void mainMenu(List<Vehicule> vehiculeList){
-        String action ="";
+        String userInputSwitch = "";
+        String userInputList = "";
         do {
             System.out.println("""
                 What do you want to do?
@@ -16,39 +17,41 @@ public class Menu {
 
 
             Scanner scanner = new Scanner(System.in);
-             action = scanner.nextLine();
+             userInputSwitch = scanner.nextLine();
+            UserInputUtils.inputException(userInputSwitch,1,5);
 
-            UserInputUtils.inputException(action);
-
-            switch (action){
+            switch (userInputSwitch){
                 case "1":
                     System.out.println("Which car?");
-                    String characteristicsCar = scanner.nextLine();
-                    Print.printCharacteristicsVehicule(vehiculeList.get(Integer.parseInt(characteristicsCar)-1));
+                    userInputList = scanner.nextLine();
+                    if (UserInputUtils.inputExceptionBool(userInputList,1, vehiculeList.size()){
+                        Print.printCharacteristicsVehicule(vehiculeList.get(Integer.parseInt(userInputList)-1));
+                    }
                     break;
-
                 case "2":
                     System.out.println("Which car?");
-                    String characteristicsMotor = scanner.nextLine();
-                    Print.printCharacteristicsMotor(vehiculeList.get(Integer.parseInt(characteristicsMotor)-1).getMotor());
+                    userInputList = scanner.nextLine();
+                    Print.printCharacteristicsMotor(vehiculeList.get(Integer.parseInt(userInputList)-1).getMotor());
                     break;
 
                 case "3":
                     System.out.println("Which car?");
-                    String characteristicsMark = scanner.nextLine();
-                    Print.printCharacteristicsMark(vehiculeList.get(Integer.parseInt(characteristicsMark)-1).getMark());
+                    userInputList = scanner.nextLine();
+                    Print.printCharacteristicsMark(vehiculeList.get(Integer.parseInt(userInputList)-1).getMark());
                     break;
 
                 case "4":
                     System.out.println("Which car?");
-                    String checkReady = scanner.nextLine();
-                    Factory.checkReady(vehiculeList.get(Integer.parseInt(checkReady)-1));
+                    userInputList = scanner.nextLine();
+                    Factory.checkReady(vehiculeList.get(Integer.parseInt(userInputList)-1));
                     break;
 
                 case "5":
                     break;
+                default:
+                    throw new IllegalStateException("Unexpected value: " + userInputSwitch);
             }
-        }while(!action.equals("5"));
+        }while(!userInputSwitch.equals("5"));
 
     }
 }
