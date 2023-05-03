@@ -5,26 +5,29 @@ public class UserInputUtils {
         try {
             int userNumber = Integer.parseInt(userInput);
             if (userNumber < minValue || userNumber > maxValue) {
-                throw new CustomException("L'entrée doit être comprise entre " + minValue + " et " + maxValue + " !");
+                throw new CustomException("The input must be between " + minValue + " and " + maxValue + " !");
             }
         } catch (NumberFormatException e) {
-            System.err.println("L'entrée doit être un nombre !");
+            System.err.println("The entry must be a number !");
         } catch (CustomException e) {
             System.err.println(e.getMessage());
         }
     }
 
-    public static void inputExceptionBool(String userInput, int minValue, int maxValue) {
+    public static boolean inputExceptionBool(String userInput, int minValue, int maxValue) {
 
-        try {
+        try{
             int userNumber = Integer.parseInt(userInput);
             if (userNumber < minValue || userNumber > maxValue) {
-                throw new CustomException("L'entrée doit être comprise entre " + minValue + " et " + maxValue + " !");
+                throw new CustomException("The input must be between " + minValue + " and " + maxValue + " !");
             }
         } catch (NumberFormatException e) {
-            System.err.println("L'entrée doit être un nombre !");
+            System.err.println("The entry must be a number !");
+            return true;
         } catch (CustomException e) {
             System.err.println(e.getMessage());
+            return true;
         }
+        return false;
     }
 }

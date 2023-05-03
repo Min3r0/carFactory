@@ -4,16 +4,23 @@ public abstract class Vehicule {
     private final Mark mark;
     private final String color;
     private final int numberMaxWheel;
-    private final int numberWheelCurrent;
+    private  int numberWheelCurrent;
     private final int constructionYear;
-    private final int kmTravelled;
+    private  int kmTravelled;
     private final int tankCapacity;
     private int remainingFuel;
-    private final boolean ready;
+    private  boolean ready;
     private final boolean custom;
 
     public void addFuel(int fuelAdding){
         this.remainingFuel += fuelAdding;
+    }
+
+    public void drive(int kmToCover){
+        if (){
+
+        }
+        this.kmTravelled += kmToCover;
     }
 
     public Vehicule(final String name, final Motor motor, final Mark mark, final String color, final int numberMaxWheel, final int numberWheelCurrent, int constructionYear, int kmTravelled, int remainingFuel, int tankCapacity, boolean ready, boolean custom) {
@@ -42,7 +49,6 @@ public abstract class Vehicule {
     public Mark getMark() {
         return mark;
     }
-
 
     public int getNumberWheelCurrent() {
         return numberWheelCurrent;

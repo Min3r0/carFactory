@@ -1,10 +1,10 @@
 import java.util.List;
 
 public class Print {
-    public static void printVehicule (List<Vehicule> listvehicule){
+    public static void printVehicule (List<Vehicule> vehiculeList){
         System.out.println("---------------------");
-        for (int i = 0; i<listvehicule.size(); i++ ){
-            System.out.println(i+1 + ") " + listvehicule.get(i).getMark().getMarkName() + " " + listvehicule.get(i).getName());
+        for (int i = 0; i<vehiculeList.size(); i++ ){
+            System.out.println(i+1 + ") " + vehiculeList.get(i).getMark().getMarkName() + " " + vehiculeList.get(i).getName());
         }
         System.out.println("---------------------");
     }
