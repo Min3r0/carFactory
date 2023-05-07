@@ -30,4 +30,17 @@ public class UserInputUtils {
         }
         return false;
     }
+
+    public static String inputExceptionYesNo(String userInput){
+        try {
+            if (!userInput.equals("y") && !userInput.equals("n")) {
+                throw new InvalidInputException(userInput);
+            }
+            // Le code ici pour le cas où l'entrée est valide
+        } catch (CustomException e) {
+            System.out.println(e.getMessage()); // Affiche "Invalid input: . Expected 'y' or 'n'."
+            return "o";
+        }
+    }
+
 }

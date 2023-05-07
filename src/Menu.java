@@ -16,7 +16,6 @@ public class Menu {
                 5) pass the technical control of a vehicle.
                 6) drive a vehicle.""");
 
-
             Scanner scanner = new Scanner(System.in);
             userInputSwitch = scanner.nextLine();
             UserInputUtils.inputException(userInputSwitch,1,6);
@@ -56,4 +55,9 @@ public class Menu {
         }while(!userInputSwitch.equals("6"));
 
     }
+
+public void menuAddFuell(){
+
+}
+
 }

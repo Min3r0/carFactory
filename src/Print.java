@@ -21,7 +21,7 @@ public class Print {
 
     public static void printCharacteristicsMark(Mark mark){
         System.out.println("---------------------");
-        System.out.print(mark.getMarkName() + " est une marque creer en " + mark.getCreationDate()+ " en " +mark.getOrigin());
+        System.out.print(mark.getMarkName() + " est une marque creer en " + mark.getCreationDate()+ " en " +mark.getOrigin() + "\n");
         System.out.println("---------------------");
 
 
@@ -33,8 +33,6 @@ public class Print {
                 motor.getHorsepower()+"HorsePower   "+motor.getCouple()+"Nm \n"+
                 motor.getCylinderCapacity()+"cm²   "+motor.getConsumption()+"L/100 Km");
         System.out.println("---------------------");
-
-
     }
 
 }

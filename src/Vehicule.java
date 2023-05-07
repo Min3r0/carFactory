@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public abstract class Vehicule {
     private final String name;
     private final Motor motor;
@@ -8,7 +10,7 @@ public abstract class Vehicule {
     private final int constructionYear;
     private  int kmTravelled;
     private final int tankCapacity;
-    private int remainingFuel;
+    private double remainingFuel;
     private  boolean ready;
     private final boolean custom;
 
@@ -17,8 +19,14 @@ public abstract class Vehicule {
     }
 
     public void drive(int kmToCover){
-        if (){
-
+        double fuelUse = (double) (kmToCover * this.motor.getConsumption()) / 100;
+        if (fuelUse > this.remainingFuel){
+            System.out.println("tu n'aura pas assez de fuel veux tu faire le plein ? (y or n)\n");
+            Scanner scanner = new Scanner(System.in);
+            String userInput = scanner.nextLine();
+            switch (userInput){
+                case "y"
+            }
         }
         this.kmTravelled += kmToCover;
     }
@@ -66,7 +74,7 @@ public abstract class Vehicule {
         return kmTravelled;
     }
 
-    public int getRemainingFuel() {
+    public double getRemainingFuel() {
         return remainingFuel;
     }
 
