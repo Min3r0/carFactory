@@ -12,16 +12,16 @@ public class Print {
     public static void printCharacteristicsVehicule(Vehicule vehicule){
         System.out.println("---------------------");
         System.out.print(vehicule.getMark().getMarkName() + "  " + vehicule.getName() + "\n"
-                + vehicule.getMotor().getMotorName() + "   année de construction: " + vehicule.setConstructionYear() +"\n"
-                + "a parcouru: " +vehicule.getKmTravelled() + "km   peut rouler: " + vehicule.checkReady()+"\n"
-                + "a un reservoir de " + vehicule.getTankCapacity() + "L et il y a dedans " + vehicule.getRemainingFuel() + "L \n");
+                + vehicule.getMotor().getMotorName() + "   year of construction: " + vehicule.setConstructionYear() +"\n"
+                + "has travelled: " +vehicule.getKmTravelled() + "km   can drive: " + vehicule.checkReady()+"\n"
+                + "has a reservoir of " + vehicule.getTankCapacity() + "L and it has in it " + vehicule.getRemainingFuel() + "L \n");
         System.out.println("---------------------");
 
     }
 
     public static void printCharacteristicsMark(Mark mark){
         System.out.println("---------------------");
-        System.out.print(mark.getMarkName() + " est une marque creer en " + mark.getCreationDate()+ " en " +mark.getOrigin() + "\n");
+        System.out.print(mark.getMarkName() + " is a brand created in " + mark.getCreationDate()+ " in " +mark.getOrigin() + "\n");
         System.out.println("---------------------");
 
 
